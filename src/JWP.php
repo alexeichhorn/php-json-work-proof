@@ -76,8 +76,6 @@ class JWP {
         $expiration = floatval($body->exp);
 
         if ($expiration <= $default_timerange_start || $expiration >= $default_timerange_end) {
-            var_dump($expiration);
-            var_dump($default_timerange_start);
             throw new ExpiredException;
         }
 
