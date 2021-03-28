@@ -44,7 +44,7 @@ To check if a token is valid for a certain difficulty and to read the claims:
 ```
 $jwt = new JWP();
 try {
-  $claims = $jwp->decode($token));
+  $claims = $jwp->decode($token);
 } catch (InvalidFormatException $e) {
   echo "The token is formatted incorrectly";
 } catch (InvalidProofException $e) {
