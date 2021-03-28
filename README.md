@@ -42,7 +42,7 @@ Currenlty not supported in PHP
 
 To check if a token is valid for a certain difficulty and to read the claims:
 ```
-$jwt = new JWP();
+$jwp = new JWP();
 try {
   $claims = $jwp->decode($token);
 } catch (InvalidFormatException $e) {
@@ -57,7 +57,7 @@ try {
 
 If you just want to read the claims without verifying the proof and expiration date, you can use this instead:
 ```
-claims = jwp.decode(token, false)
+$claims = jwp.decode(token, false)
 ```
 
 It expects the expiration date to be between now and 30 minutes in the future.
