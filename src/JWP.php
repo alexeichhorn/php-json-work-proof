@@ -1,6 +1,6 @@
 <?php
 
-namespace alexeichhorn\JSONWorkProof;
+namespace JSONWorkProof;
 
 class DecodeException extends \Exception {}
 class InvalidFormatException extends DecodeException {}

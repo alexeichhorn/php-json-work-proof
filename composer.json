@@ -14,6 +14,6 @@
         }
     ],
     "autoload": {
-        "psr-4": { "alexeichhorn\\JSONWorkProof\\": "src" }
+        "psr-4": { "JSONWorkProof\\": "src" }
     }
 }

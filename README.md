@@ -26,7 +26,7 @@ E.g. you can use this to prevent brute forcing user logins: The client generates
 
 To generate and validate tokens you need to use a `JWP`-object. On creation you can specify the `difficulty`, which determines how hard the challenge should be. It defaults to `20`, which takes about a second to compute on an average computer. Each increment by one, doubles the difficulty and therefore the time it takes to generate.
 ```
-use alexeichhorn\JSONWorkProof\JWP;
+use JSONWorkProof\JWP;
 
 $jwp = new JWP(); # defaults to difficulty 20
 $jwp_harder = new JWP(25);
@@ -45,11 +45,11 @@ To check if a token is valid for a certain difficulty and to read the claims:
 $jwp = new JWP();
 try {
   $claims = $jwp->decode($token);
-} catch (InvalidFormatException $e) {
+} catch (JSONWorkProof\InvalidFormatException $e) {
   echo "The token is formatted incorrectly";
-} catch (InvalidProofException $e) {
+} catch (JSONWorkProof\InvalidProofException $e) {
   echo "The difficulty this token was created at is lower than what is specified in your JWP object";
-} catch (ExpiredException $e) {
+} catch (JSONWorkProof\ExpiredException $e) {
   echo "The token expiration is too old or too new";
 }
 ```
