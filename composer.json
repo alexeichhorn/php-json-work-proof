@@ -1,0 +1,19 @@
+{
+    "name": "alexeichhorn/json-work-proof",
+    "type": "library",
+    "description": "JSON Work Proof (JWP) - proof-of-work algorithm",
+    "keywords": ["proof-of-work","validation","JWT","token", "hashcash", "JSON"],
+    "homepage": "https://losjet.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander Eichhorn",
+            "email": "",
+            "homepage": "https://losjet.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "alexeichhorn\\JSONWorkProof\\": "src/" }
+    }
+}
